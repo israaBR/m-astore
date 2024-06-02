@@ -1,0 +1,39 @@
+
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found
+[visible]="!parfums ||  !parfums.length"
+resetLinkText="Reset Search"></app-not-found>
+      <ul>
+                    <li *ngFor="let parfum of parfums">
+                    <a routerLink="/parfum/{{parfum.id}}">
+                 <img [src]="parfum.imageUrl" [alt]="parfum.name">
+                 <div class="content">
+                  <div class = "name">
+                  {{parfum.name}}
+                 </div>
+                  <span class="favorite {{parfum.favorite?'':'not'}}">
+                   ♥
+                  </span> 
+        <div class="stars">
+            <app-star-rating [stars]="parfum.stars"/>
+
+        </div>
+        <div class="product-item-footer">
+            <div class="origins">
+                <span *ngFor="let origin of parfum.origins">
+                    {{origin}}
+                </span>
+            </div>
+        </div>
+        <div class="price">
+            
+                <span >
+                    {{parfum.price | currency}}
+                </span>
+            </div>
+        
+       </div>
+       </a>
+    </li>
+</ul>

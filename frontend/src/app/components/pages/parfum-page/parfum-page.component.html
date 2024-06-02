@@ -1,0 +1,28 @@
+<app-not-found
+  [visible]="!parfum"
+  [visible]="!parfum"
+  notFoundMessage="Parfum not Found"
+  resetLinkText="Back to Homepage">
+</app-not-found>
+<div *ngIf="parfum" class="container">
+  <img [src]="parfum.imageUrl" [alt]="parfum.name" class="parfum-image"/>
+  <div class="details">
+    <div class="header">
+      <span class="name">{{parfum.name}}</span>
+      <span class="favorite {{parfum.favorite ? '' : 'not'}}"> ♥ </span>
+    </div>
+    <div class="origins">
+      <span *ngFor="let origin of parfum.origins">{{origin}}</span>
+    </div>
+    <div class="tags">
+      <a *ngFor="let tag of parfum.tags" routerLink="/tag/{{tag}}">
+        {{tag}}
+      </a>
+    </div>
+    <div class="price">
+      <span>{{parfum.price | currency}}</span>
+    </div>
+    <button (click)="addToCart()">Add To Cart</button>
+  </div>
+</div>
+
