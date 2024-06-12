@@ -9,7 +9,7 @@ import authMid from "../middlewares/auth.mid";
 const router = Router();
 router.use(authMid);
 
-router.post('/creat',
+router.post('/create',
 AsyncHandler (async (req:any , res:any) =>{
     const requestOrder = req.body;
     if(requestOrder.items.length <= 0){

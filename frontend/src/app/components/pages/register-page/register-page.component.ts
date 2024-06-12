@@ -29,7 +29,7 @@ returnUrl = '';
         email: ['', [Validators.required, Validators.email]],
         password:['', [Validators.required, Validators.minLength(5)]],
         confirmPassword:['', [Validators.required]],
-        adress:['', [Validators.required, Validators.minLength(10)]],
+        address:['', [Validators.required, Validators.minLength(10)]],
       },{
         validators: PasswordsMatchValidator('password','confirmPassword')
       } );
