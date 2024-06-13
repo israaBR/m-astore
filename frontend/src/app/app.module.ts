@@ -29,6 +29,7 @@ import { OrderItemsListComponent } from './components/partial/order-items-list/o
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partial/paypal-button/paypal-button.component';
+import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { PaypalButtonComponent } from './components/partial/paypal-button/paypal
     OrderItemsListComponent,
     PaymentPageComponent,
     PaypalButtonComponent,
+    OrderTrackPageComponent,
 
    
   ],
