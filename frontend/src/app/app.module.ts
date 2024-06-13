@@ -30,6 +30,7 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { PaypalButtonComponent } from './components/partial/paypal-button/paypal-button.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { StarRatingComponent } from './components/partial/star-rating/star-rating.component';
+import { AllOrdersPageComponent } from './components/pages/all-orders-page/all-orders-page.component';//new
 
 @NgModule({
   declarations: [
@@ -55,8 +56,7 @@ import { StarRatingComponent } from './components/partial/star-rating/star-ratin
     PaypalButtonComponent,
     OrderTrackPageComponent,
     StarRatingComponent,
-
-   
+    AllOrdersPageComponent,//new   
   ],
   imports: [
     BrowserModule,

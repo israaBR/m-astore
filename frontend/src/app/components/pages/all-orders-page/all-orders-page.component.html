@@ -1,0 +1,13 @@
+<app-title title="ِAll Orders Page" margin="1.5rem 0 0 2.5rem"></app-title>
+<app-not-found
+  [visible]="!orders || !orders.length"
+  notFoundMessage="Orders Page is Empty!"
+  resetLinkText="Go to Homepage"
+></app-not-found>
+<div *ngIf="orders && orders.length" class="container">
+  <ul>
+    <li *ngFor="let orderData of orders">
+      <order-items-list [order]="orderData"></order-items-list>
+    </li>
+  </ul>
+</div>

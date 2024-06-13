@@ -10,28 +10,36 @@ import { AuthGuard } from './auth/guards/auth.guard';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { OrderItemsListComponent } from './components/partial/order-items-list/order-items-list.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
-
-
-
-
+import { AllOrdersPageComponent } from './components/pages/all-orders-page/all-orders-page.component';//new
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'search/:searchTerm', component:HomeComponent},
-  {path:'tag/:tag',component:HomeComponent},
-  {path:'parfum/:id',component:ParfumPageComponent},
-  {path:'cart-page', component:CartPageComponent},
-  {path:'login', component:LoginPageComponent},
-  {path:'register', component:RegisterPageComponent},
-  {path:'checkout', component:CheckoutPageComponent, canActivate : [AuthGuard]},
-  {path:'payment', component:PaymentPageComponent, canActivate : [AuthGuard]},
-  {path:'orders',component:OrderItemsListComponent},
-{path:'track/:orderId', component:OrderTrackPageComponent, canActivate : [AuthGuard]}
+  { path: '', component: HomeComponent },
+  { path: 'search/:searchTerm', component: HomeComponent },
+  { path: 'tag/:tag', component: HomeComponent },
+  { path: 'parfum/:id', component: ParfumPageComponent },
+  { path: 'cart-page', component: CartPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent },
+  {
+    path: 'checkout',
+    component: CheckoutPageComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'payment',
+    component: PaymentPageComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'orders', component: AllOrdersPageComponent },//new
+  {
+    path: 'track/:orderId',
+    component: OrderTrackPageComponent,
+    canActivate: [AuthGuard],
+  },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
