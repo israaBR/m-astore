@@ -11,6 +11,9 @@
       <span class="name">{{parfum.name}}</span>
       <span class="favorite {{parfum.favorite ? '' : 'not'}}"> ♥ </span>
     </div>
+    <div class="rating">
+      <star-rating [stars]="parfum.stars"[size]="1.8" />
+    </div>
     <div class="origins">
       <span *ngFor="let origin of parfum.origins">{{origin}}</span>
     </div>
@@ -25,4 +28,5 @@
     <button (click)="addToCart()">Add To Cart</button>
   </div>
 </div>
+
 

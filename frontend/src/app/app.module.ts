@@ -7,7 +7,6 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { ParfumPageComponent } from './components/pages/parfum-page/parfum-page.component';
 import { SearchComponent } from './components/partial/search/search.component';
 import { TagsComponent } from './components/partial/tags/tags.component';
-import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
@@ -30,13 +29,13 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partial/paypal-button/paypal-button.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
+import { StarRatingComponent } from './components/partial/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    StarRatingComponent,
     ParfumPageComponent,
     SearchComponent,
     TagsComponent,
@@ -55,6 +54,7 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
     PaymentPageComponent,
     PaypalButtonComponent,
     OrderTrackPageComponent,
+    StarRatingComponent,
 
    
   ],
